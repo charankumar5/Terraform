@@ -1,4 +1,14 @@
 terraform {
+
+  backend "s3" {
+    bucket = "goppodivirababu"
+    key    = "dev/terraform.tfstate"
+    region = "eu-central-1"
+    use_lockfile = true
+    encrypt = true
+
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
