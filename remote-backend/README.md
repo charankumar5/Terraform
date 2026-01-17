@@ -10,3 +10,24 @@ For that you should have already created a bucket, so don't create a bucket with
 - So it still has your credential information, and its not good way to manage. so create manaully.
 
 
+### Backend Configuration
+
+    terraform {
+        
+    backend "s3" {
+        bucket = "goppodivirababu"
+        key    = "dev/terraform.tfstate"
+        region = "eu-central-1"
+        use_lockfile = true
+        encrypt = true
+    }
+
+    required_providers {
+        aws = {
+        source  = "hashicorp/aws"
+        version = "~> 6.0"
+        }
+    }
+    }
+
+
