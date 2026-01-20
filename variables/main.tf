@@ -22,6 +22,7 @@ variable "instance_type" {
 variable "subnet_id" {
   description = "Subnet ID for the AWS EC2 instance"
   type        = string
+  default     = "subnet-0934nnke8fj4k0s803js"
 }
 
 variable "environment" {
